@@ -6,6 +6,9 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- script: sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh 5_4_1
+  displayName: 'Select Xamarin SDK version'
+
 - task: NuGetToolInstaller@0
 
 - task: NuGetCommand@2
